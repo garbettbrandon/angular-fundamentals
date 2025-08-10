@@ -1,0 +1,81 @@
+<div class="developer-form-container" [class.dark-theme]="isDarkMode">
+  <app-header></app-header>
+
+  <main class="developer-form-content">
+    <div class="form-header">
+      <button class="btn btn-back" (click)="cancel()">← Volver</button>
+      <h1 class="form-title">Añadir Nuevo Desarrollador</h1>
+    </div>
+
+    <div class="form-card">
+      <form class="add-form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="first_name">Nombre:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            [(ngModel)]="newDeveloper.first_name"
+            required
+            placeholder="Ingresa el nombre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Apellidos:</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            [(ngModel)]="newDeveloper.last_name"
+            required
+            placeholder="Ingresa los apellidos"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="newDeveloper.email"
+            required
+            placeholder="Ingresa el email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="position">Posición:</label>
+          <select
+            id="position"
+            name="position"
+            [(ngModel)]="newDeveloper.position"
+            required
+          >
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+          </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="remote"
+              [(ngModel)]="newDeveloper.remote"
+            />
+            Trabaja en Remoto
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-cancel" (click)="cancel()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-save">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>

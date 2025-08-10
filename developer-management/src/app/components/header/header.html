@@ -1,0 +1,15 @@
+<header class="header" [class.dark-theme]="isDarkMode">
+  <div class="header-left">
+    <button class="btn btn-primary" (click)="onShowUsers()">
+      Mostrar usuarios
+    </button>
+    <button class="btn btn-secondary" (click)="onAddUser()">
+      Añadir usuario
+    </button>
+  </div>
+  <div class="header-right">
+    <button class="btn btn-theme" (click)="toggleTheme()">
+      {{ isDarkMode ? "Light" : "Dark" }}
+    </button>
+  </div>
+</header>

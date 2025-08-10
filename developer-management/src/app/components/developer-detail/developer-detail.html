@@ -1,0 +1,135 @@
+<div class="developer-detail-container" [class.dark-theme]="isDarkMode">
+  <app-header></app-header>
+
+  <main class="developer-detail-content">
+    <div class="detail-header">
+      <button class="btn btn-back" (click)="goBack()">← Volver</button>
+      <h1 class="detail-title">Detalle del Desarrollador</h1>
+    </div>
+
+    <div *ngIf="developer && !isEditing" class="developer-detail-card">
+      <div class="developer-photo-section">
+        <img
+          [src]="developer.photo"
+          [alt]="developer.first_name"
+          class="detail-photo"
+        />
+      </div>
+
+      <div class="developer-info-section">
+        <h2 class="developer-full-name">
+          {{ developer.first_name }} {{ developer.last_name }}
+        </h2>
+        <p class="developer-email">{{ developer.email }}</p>
+        <p class="developer-position">{{ developer.position }}</p>
+
+        <div class="developer-status">
+          <span class="status-badge" [class.remote]="developer.remote === true">
+            {{
+              developer.remote === true
+                ? "Trabaja en Remoto"
+                : "Trabaja Presencial"
+            }}
+          </span>
+        </div>
+
+        <div class="developer-actions">
+          <button class="btn btn-edit" (click)="startEditing()">Editar</button>
+          <button class="btn btn-delete" (click)="deleteDeveloper()">
+            Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isEditing && editedDeveloper" class="developer-edit-card">
+      <h2 class="edit-title">Editar Desarrollador</h2>
+
+      <form class="edit-form" (ngSubmit)="saveChanges()">
+        <div class="form-group">
+          <label for="first_name">Nombre:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            [(ngModel)]="editedDeveloper.first_name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Apellidos:</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            [(ngModel)]="editedDeveloper.last_name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            [(ngModel)]="editedDeveloper.email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="position">Posición:</label>
+          <select
+            id="position"
+            name="position"
+            [(ngModel)]="editedDeveloper.position"
+            required
+          >
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">URL de la Foto:</label>
+          <input
+            type="url"
+            id="photo"
+            name="photo"
+            [(ngModel)]="editedDeveloper.photo"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="remote"
+              [(ngModel)]="editedDeveloper.remote"
+            />
+            Trabaja en Remoto
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button
+            type="button"
+            class="btn btn-cancel"
+            (click)="cancelEditing()"
+          >
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-save">Guardar</button>
+        </div>
+      </form>
+    </div>
+
+    <div *ngIf="!developer" class="not-found">
+      <p>Desarrollador no encontrado.</p>
+      <button class="btn btn-back" (click)="goBack()">Volver a la lista</button>
+    </div>
+  </main>
+</div>

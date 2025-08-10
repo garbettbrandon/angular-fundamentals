@@ -1,0 +1,41 @@
+<div class="welcome-container" [class.dark-theme]="isDarkMode">
+  <app-header></app-header>
+
+  <main class="welcome-content">
+    <div class="welcome-card">
+      <h1 class="welcome-title">Bienvenido a Gestión de Developers</h1>
+      <p class="welcome-subtitle">
+        Sistema de gestión de desarrolladores de la empresa
+      </p>
+
+      <div class="welcome-features">
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+          <h3>Gestionar Usuarios</h3>
+          <p>Visualiza y administra todos los desarrolladores del equipo</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">➕</div>
+          <h3>Añadir Nuevos</h3>
+          <p>Agrega nuevos desarrolladores al sistema</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <h3>Personalizar</h3>
+          <p>Cambia entre modo claro y oscuro según tu preferencia</p>
+        </div>
+      </div>
+
+      <div class="welcome-actions">
+        <button class="btn btn-primary" (click)="onShowUsers()">
+          Ver Desarrolladores
+        </button>
+        <button class="btn btn-secondary" (click)="onAddUser()">
+          Añadir Desarrollador
+        </button>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,250 @@
+.developer-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  transition: all 0.3s ease;
+}
+
+.developer-list-container.dark-theme {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.developer-list-content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.list-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.list-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-theme .list-title {
+  background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.list-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.dark-theme .list-subtitle {
+  color: #ccc;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #667eea;
+  background: transparent;
+  color: #667eea;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.dark-theme .filter-btn {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark-theme .filter-btn:hover,
+.dark-theme .filter-btn.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.developers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.developer-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.developer-card.dark-theme {
+  background: #333;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.developer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.developer-photo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .photo {
+  border-color: #4CAF50;
+}
+
+.developer-info {
+  text-align: center;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.developer-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dark-theme .developer-name {
+  color: white;
+}
+
+.developer-position {
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.dark-theme .developer-position {
+  color: #ccc;
+}
+
+.developer-status {
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.remote {
+  background: #e8f5e8;
+  color: #4caf50;
+}
+
+.dark-theme .status-badge {
+  background: #2c3e50;
+  color: #3498db;
+}
+
+.dark-theme .status-badge.remote {
+  background: #2c3e50;
+  color: #2ecc71;
+}
+
+.developer-actions {
+  text-align: center;
+}
+
+.btn-detail {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 100%;
+}
+
+.dark-theme .btn-detail {
+  background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+}
+
+.btn-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.dark-theme .btn-detail:hover {
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.dark-theme .no-results {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .developer-list-content {
+    padding: 1rem;
+  }
+
+  .list-title {
+    font-size: 2rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .developers-grid {
+    grid-template-columns: 1fr;
+  }
+}
