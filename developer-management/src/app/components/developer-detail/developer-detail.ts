@@ -12,7 +12,7 @@ import { ThemeService } from '../../services/theme.service';
   standalone: true,
   imports: [CommonModule, FormsModule, HeaderComponent],
   templateUrl: './developer-detail.html',
-  styleUrl: './developer-detail.css'
+  styleUrl: './developer-detail.css',
 })
 export class DeveloperDetailComponent implements OnInit {
   developer: Developer | undefined;
@@ -26,7 +26,7 @@ export class DeveloperDetailComponent implements OnInit {
     private developerService: DeveloperService,
     private themeService: ThemeService
   ) {
-    this.themeService.isDarkMode$.subscribe(isDark => {
+    this.themeService.isDarkMode$.subscribe((isDark) => {
       this.isDarkMode = isDark;
     });
   }
@@ -65,7 +65,10 @@ export class DeveloperDetailComponent implements OnInit {
   }
 
   deleteDeveloper(): void {
-    if (this.developer && confirm('¿Estás seguro de que quieres eliminar este desarrollador?')) {
+    if (
+      this.developer &&
+      confirm('¿Estás seguro de que quieres eliminar este desarrollador?')
+    ) {
       this.developerService.deleteDeveloper(this.developer.id);
       this.router.navigate(['/developers']);
     }

@@ -2,7 +2,7 @@
 
 Una aplicación web para la gestión de desarrolladores de una empresa, desarrollada con Angular siguiendo los fundamentos del framework.
 
-## 🚀 Características
+## Características
 
 - **Página de bienvenida** con diseño moderno y responsive
 - **Header** con navegación y botón de cambio de tema (Dark/Light)
@@ -14,7 +14,7 @@ Una aplicación web para la gestión de desarrolladores de una empresa, desarrol
 - **Tema oscuro/claro** con persistencia
 - **Diseño responsive** para móviles y tablets
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Angular 17** - Framework principal
 - **TypeScript** - Lenguaje de programación
@@ -22,26 +22,29 @@ Una aplicación web para la gestión de desarrolladores de una empresa, desarrol
 - **HTML5** - Estructura semántica
 - **JSON** - Datos de desarrolladores
 
-## 📋 Requisitos del Sistema
+## Requisitos del Sistema
 
 - Node.js (versión 18 o superior)
 - npm (incluido con Node.js)
 - Angular CLI
 
-## 🔧 Instalación
+## Instalación
 
 1. **Clonar el repositorio:**
+
    ```bash
    git clone <url-del-repositorio>
    cd developer-management
    ```
 
 2. **Instalar dependencias:**
+
    ```bash
    npm install
    ```
 
 3. **Ejecutar la aplicación:**
+
    ```bash
    npm start
    ```
@@ -76,9 +79,9 @@ src/
 └── main.ts                  # Punto de entrada
 ```
 
-## 🎯 Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
-### ✅ Requisitos Cumplidos
+### Requisitos Cumplidos
 
 1. **Página de bienvenida** - Diseño libre con header
 2. **Header** - Botones "Mostrar usuarios", "Añadir usuario" y "Aspecto"
@@ -90,7 +93,7 @@ src/
 8. **Cambio de tema** - Botón "Aspecto" que cambia entre Dark/Light
 9. **Eliminación** - Botón opcional para eliminar desarrolladores
 
-### 🔧 Características Técnicas
+### Características Técnicas
 
 - **HTML semántico** y CSS moderno
 - **Router de Angular** para navegación
@@ -103,7 +106,7 @@ src/
 - **Servicios** para gestión de estado
 - **Diseño responsive**
 
-## 🎨 Diseño y UX
+## Diseño y UX
 
 - **Diseño moderno** con gradientes y sombras
 - **Animaciones suaves** y transiciones
@@ -112,14 +115,15 @@ src/
 - **Iconos y badges** para mejor UX
 - **Formularios intuitivos** con validación
 
-## 📱 Responsive Design
+## Responsive Design
 
 La aplicación está optimizada para:
+
 - **Desktop** (1200px+)
 - **Tablet** (768px - 1199px)
 - **Mobile** (hasta 767px)
 
-## 🚀 Scripts Disponibles
+## Scripts Disponibles
 
 ```bash
 # Desarrollo
@@ -136,7 +140,7 @@ npm run lint       # Verificar código
 npm run lint:fix   # Corregir problemas de linting
 ```
 
-## 📊 Datos de Ejemplo
+## Datos de Ejemplo
 
 Los desarrolladores se cargan desde `src/assets/developers.json` con la siguiente estructura:
 
@@ -152,7 +156,7 @@ Los desarrolladores se cargan desde `src/assets/developers.json` con la siguient
 }
 ```
 
-## 🔄 Flujo de la Aplicación
+## Flujo de la Aplicación
 
 1. **Página de bienvenida** → Navegación principal
 2. **Lista de desarrolladores** → Ver todos o filtrar por especialidad
@@ -161,7 +165,7 @@ Los desarrolladores se cargan desde `src/assets/developers.json` con la siguient
 5. **Añadir desarrollador** → Crear nuevo registro
 6. **Eliminar desarrollador** → Borrar registro (opcional)
 
-## 🎯 Evaluación de Competencias
+## Evaluación de Competencias
 
 Este proyecto demuestra competencias en:
 
@@ -176,7 +180,7 @@ Este proyecto demuestra competencias en:
 - ✅ **Formularios** - Template-driven forms
 - ✅ **Comunicación** - @Input/@Output entre componentes
 
-## 🤝 Contribución
+## Contribución
 
 1. Fork el proyecto
 2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
@@ -184,14 +188,12 @@ Este proyecto demuestra competencias en:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abrir un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
-## 👨‍💻 Autor
+## Autor
 
-Desarrollado como proyecto de evaluación para Angular Fundamentals.
+Desarrollado por Brandon Garbett como proyecto de evaluación para Angular Fundamentals.
 
 ---
-
-**¡Disfruta gestionando tu equipo de desarrolladores! 🚀**

@@ -8,13 +8,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class AppComponent {
   isDarkMode = false;
 
   constructor(private themeService: ThemeService) {
-    this.themeService.isDarkMode$.subscribe(isDark => {
+    this.themeService.isDarkMode$.subscribe((isDark) => {
       this.isDarkMode = isDark;
     });
   }

@@ -48,7 +48,7 @@
 }
 
 .dark-theme .detail-title {
-  background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+  background: linear-gradient(135deg, #4caf50 0%, #2196f3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -84,7 +84,7 @@
 }
 
 .dark-theme .detail-photo {
-  border-color: #4CAF50;
+  border-color: #4caf50;
 }
 
 .developer-info-section {
@@ -120,7 +120,7 @@
 }
 
 .dark-theme .developer-position {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .developer-status {
@@ -161,7 +161,7 @@
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -169,7 +169,7 @@
 }
 
 .btn-edit:hover {
-  background: #1976D2;
+  background: #1976d2;
   transform: translateY(-2px);
 }
 
@@ -261,7 +261,7 @@
 
 .dark-theme .form-group input:focus,
 .dark-theme .form-group select:focus {
-  border-color: #4CAF50;
+  border-color: #4caf50;
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
@@ -318,7 +318,7 @@
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
-  background: #4CAF50;
+  background: #4caf50;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
