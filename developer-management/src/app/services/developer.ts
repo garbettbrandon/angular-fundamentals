@@ -16,18 +16,21 @@ export class DeveloperService {
 
   private loadDevelopers(): void {
     console.log('Loading developers from assets/developers.json...');
-    this.http.get<Developer[]>('assets/developers.json').subscribe((data) => {
-      console.log('Developers loaded successfully:', data);
-      console.log('Number of developers:', data.length);
-      // Normalize remote values to handle null values
-      this.developers = data.map(dev => ({
-        ...dev,
-        remote: dev.remote === null ? false : dev.remote
-      }));
-      this.developersSubject.next(this.developers);
-    }, (error) => {
-      console.error('Error loading developers:', error);
-    });
+    this.http.get<Developer[]>('assets/developers.json').subscribe(
+      (data) => {
+        console.log('Developers loaded successfully:', data);
+        console.log('Number of developers:', data.length);
+        // Normalize remote values to handle null values
+        this.developers = data.map((dev) => ({
+          ...dev,
+          remote: dev.remote === null ? false : dev.remote,
+        }));
+        this.developersSubject.next(this.developers);
+      },
+      (error) => {
+        console.error('Error loading developers:', error);
+      }
+    );
   }
 
   getDevelopers(): Observable<Developer[]> {

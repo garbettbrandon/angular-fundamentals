@@ -32,13 +32,6 @@
     </div>
 
     <div class="developers-grid">
-      <!-- Debug info -->
-      <div style="background: yellow; padding: 10px; margin: 10px">
-        <p>Debug: Total developers: {{ developers.length }}</p>
-        <p>Debug: Filtered developers: {{ filteredDevelopers.length }}</p>
-        <p>Debug: Current filter: {{ currentFilter }}</p>
-      </div>
-
       <div
         *ngFor="let developer of filteredDevelopers"
         class="developer-card"
